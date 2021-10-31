@@ -4,7 +4,7 @@ def strip(string):
 
 # this function reads database from contacts.txt file
 def read_database():
-    file = open("D:\Всё по теху\Программы\contacts.txt", encoding="utf-8")
+    file = open("...\contacts.txt", encoding="utf-8")
     rows = []
     for row in file:
         rows.append(list(map(strip, row.split(", "))))
@@ -12,7 +12,7 @@ def read_database():
 
 # this function writes contacts to file
 def write_database(db):
-    file = open("D:\Всё по теху\Программы\contacts.txt", mode="w", encoding="utf-8")
+    file = open("...\contacts.txt", mode="w", encoding="utf-8")
     rows = []
     for row in db: 
         rows.append(", ".join(row))
@@ -56,7 +56,7 @@ def remove(db):
     write_database(db)
 
 def sumNums(db):
-    with open('D:\Всё по теху\Программы\contacts.txt', 'r') as db:
+    with open('...\contacts.txt', 'r') as db:
         count = i = 0
         for line in db:
             name, phone, age, email = line.split(',')
